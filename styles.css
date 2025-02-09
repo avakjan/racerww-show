@@ -1,10 +1,97 @@
 /* styles.css */
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+.mmp-ui-container {
+  background-image: linear-gradient(#ffffff, #cdcdcd, #969696);
+  border-style: solid;
+  border-width: 1px;
+  display: grid;
+  font-family: Verdana, Helvetica, Arial;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 4fr;
+  min-height: 75px;
+  min-width: 300px;
+}
+
+.mmp-button-container {
+  margin: 8px 3px 8px 8px;
+}
+
+.mmp-button-container>button {
+  background-image: linear-gradient(#ffffff, #cdcdcd, #969696);
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #343a40;
+  height: 100%;
+  width: 100%;
+}
+
+.mmp-icon {
+  font-size: 48px;
+}
+
+.mmp-play-icon {
+  color: #00d820;
+}
+
+.mmp-pause-icon {
+  color: #343a40;
+}
+
+.mmp-display-container {
+  background-color: #343a40;
+  border-radius: 3px;
+  color: white;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 4fr 1fr;
+  font-size: 80%;
+  margin: 8px 8px 8px 3px;
+  padding-left: 10px;
+  padding-right: 5px;
+}
+
+.mmp-eq-container {
+  align-items: flex-end;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mmp-eq-container>img {
+  height: 20px;
+  width: 60px;
+}
+
+.mmp-song-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.mmp-song-name {
+  font-weight: bold;
+}
+
 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #ededed;
+  }
+
+  .profile5 {
     background: url('./photos/2w.gif') fixed;
+  }
+
+  .profile6 {
+    background:url(http://www.fillster.com/images/backgrounds/203k.gif); background-attachment:fixed; background-repeat:repeat;
+  }
+
+  .profile7 {
+    background-color: #878787;
   }
 
   img {
@@ -12,25 +99,20 @@ body {
   }
   
   header {
-    background: #971855;
+    background: #1e1e1e;
     color: white;
-    text-align: center;
   }
   
   header h1 {
-    margin: 0;
+    margin: 0 15px;
   }
   
   nav ul {
     list-style: none;
     padding: 0;
-    margin: 10px 0 0 0;
+    margin: 5px 0 0 15px;
     display: flex;
-    justify-content: center;
-  }
-  
-  nav ul li {
-    margin: 0 15px;
+    gap: 5px;
   }
   
   nav ul li a {
@@ -57,32 +139,74 @@ body {
     flex-direction: column;
   }
 
-  .gallery, .friend-list, .about-me {
+  .gallery, .friend-list, .about-me, .post, .details {
     border-radius: 1px;
-    padding: 4px;
+    padding: 10px;
     margin-top: 15px;
-    background: #971855;
-    outline: solid 4px #eb0071;
   }
 
-  .friends-count {
+  .profile1 .gallery, .profile1 .friend-list, .profile1 .about-me, .profile1 .post, .profile1 .details {
+    background: #97185538;
+    outline: solid 3px #eb0071;
+  }
+
+  .profile2 .gallery, .profile2 .friend-list, .profile2 .about-me, .profile2 .post, .profile2 .details {
+    background: #97185538;
+    outline: solid 3px #eb0071;
+  }
+
+  .profile3 .gallery, .profile3 .friend-list, .profile3 .about-me, .profile3 .post, .profile3 .details {
+    background: #97185538;
+    outline: solid 3px #eb0071;
+  }
+  
+  .profile4 .gallery, .profile4 .friend-list, .profile4 .about-me, .profile4 .post, .profile4 .details {
+    background: #97185538;
+    outline: solid 3px #eb0071;
+  }
+
+  .profile5 .gallery, .profile5 .friend-list, .profile5 .about-me, .profile5 .post, .profile5 .details {
+    background: #97185538;
+    outline: solid 3px #eb0071;
+  }
+
+  .profile6 .gallery, .profile6 .friend-list, .profile6 .about-me, .profile6 .post, .profile6 .details {
+    background: #efefefbf;
+    outline: solid 3px #3d3223;
+  }
+
+  .profile7 .gallery, .profile7 .friend-list, .profile7 .about-me, .profile7 .post, .profile7 .details {
+    background: #18181863;
+    outline: solid 3px #000;
+  }
+
+  .post .images img {
+    flex-shrink: 1;
+    max-width: 31%;     
+    height: auto;        
+  }
+
+  .post-meta {
     display: flex;
-    gap: 6px;
     align-items: baseline;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #494949;
   }
 
   .profile {
     display: flex;
-    gap: 13px;
+    gap: 15px;
     flex-direction: row;
   }
 
   .profile-left-side {
-    width: 48vw;
+    width: 302px;
   }
 
   .profile-right-side {
-    width: 48vw;
+    width: 330px;
+    margin-top: 22px;
   }
 
   .pfp-and-description {
@@ -96,9 +220,9 @@ body {
   }
 
   .pfp-and-description img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
+    width: 170px;
+    /* height: 150px;
+    object-fit: cover; */
   }
 
   .gallery img{
@@ -108,6 +232,7 @@ body {
 
   .pfp-and-description-text {
     align-content: center;
+    font-size: 0.7rem;
   }
 
   .pfp-and-description-text p {
@@ -117,19 +242,14 @@ body {
   .profile-card h2 {
     margin-top: 10px;
   }
-  
-  .profile-card button {
-    background: #ff6b81;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-  }
-  
-  .profile-card button:hover {
-    background: #ff4757;
+
+  .title {
+    display: flex;
+    gap: 6px;
+    align-items: baseline;
+    block-size: 16px;
+    background-color: #ffc543;
+    margin: 0 0 5px;
   }
   
   footer {
@@ -140,8 +260,13 @@ body {
   } 
   
   .friend-list-pfp img {
-    width: 74px;
-    height: 74px;
+    width: 67px;
+    height: 67px;
+  }
+
+  .view-my {
+    display: flex;
+    gap: 5px;
   }
 
   p {
